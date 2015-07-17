@@ -1,0 +1,27 @@
+{
+    "name": "fastd/module",
+    "type": "project",
+    "keywords": [
+        "module develop"
+    ],
+    "description": "The fastd module framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "janhuang",
+            "email": "384099566@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
