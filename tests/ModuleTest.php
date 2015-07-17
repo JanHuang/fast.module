@@ -12,7 +12,7 @@
  * Gmail: bboyjanhuang@gmail.com
  * WebSite: http://www.janhuang.me
  */
-class ModuleTest extends \PHPUnit_Framework_TestCase
+class ModuleTest extends PHPUnit_Framework_TestCase
 {
     public function testModule()
     {

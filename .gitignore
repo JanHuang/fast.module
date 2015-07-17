@@ -1,2 +1,5 @@
 /vendor/
 .idea
+./web
+./tests
+./src

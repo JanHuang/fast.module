@@ -24,13 +24,21 @@ class Module
         static::createSrc($root);
         static::createWeb($root);
         static::createTests($root);
-        static::move($root);
+    }
+
+    public static function createBoot($rootPath)
+    {
+        $boot = $rootPath . DIRECTORY_SEPARATOR . 'bootstrop';
+        static::mkdir($boot);
+        copy(__DIR__ . '/init/app/App.php', $boot . '/App.php');
+        copy(__DIR__ . '/init/app/bootstrap.php', $boot . '/bootstrap.php');
     }
 
     public static function createWeb($rootPath)
     {
         $web = $rootPath . DIRECTORY_SEPARATOR . 'web';
         static::mkdir($web);
+        copy(__DIR__ . '/init/web/index.php', $web . '/index.php');
     }
 
     public static function createSrc($rootPath)
@@ -43,6 +51,8 @@ class Module
     {
         $tests = $rootPath . DIRECTORY_SEPARATOR . 'tests';
         static::mkdir($tests);
+        copy(__DIR__ . '/init/tests/ModuleTest.php', $tests . '/ModuleTest.php');
+        copy(__DIR__ . '/init/tests/phpunit.xml.dist', $rootPath . '/phpunit.xml.dist');
     }
 
     protected static function mkdir($dir)
@@ -51,12 +61,4 @@ class Module
             mkdir($dir, 0755, true);
         }
     }
-
-    public static function move($rootPath)
-    {
-        static::moveUnitFile($rootPath);
-    }
-
-    public static function moveUnitFile($rootPath)
-    {}
 }

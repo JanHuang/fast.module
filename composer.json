@@ -25,6 +25,9 @@
             "Module\\": "Module"
         }
     },
+    "config": {
+        "bin-dir": "bin"
+    },
     "scripts": {
         "post-install-cmd": [
             "Module\\Module::init",
