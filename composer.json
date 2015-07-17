@@ -1,6 +1,6 @@
 {
     "name": "fastd/fastd-module",
-    "type": "library",
+    "type": "project",
     "keywords": [
         "module develop"
     ],
@@ -30,6 +30,10 @@
     },
     "scripts": {
         "post-install-cmd": [
+            "Module\\Module::init",
+            "phpunit"
+        ],
+        "post-update-cmd": [
             "Module\\Module::init",
             "phpunit"
         ],
