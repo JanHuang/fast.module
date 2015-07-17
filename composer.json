@@ -1,5 +1,5 @@
 {
-    "name": "fastd/module",
+    "name": "fastd/fastd-module",
     "type": "project",
     "keywords": [
         "module develop"
@@ -17,11 +17,33 @@
         "php": ">=5.5"
     },
     "require-dev": {
-        
+        "fastd/fastd": "dev-dev",
+        "fastd/http": "dev-dev",
+        "fastd/routing": "dev-dev",
+        "fastd/database": "dev-dev",
+        "fastd/container": "dev-dev",
+        "fastd/config": "dev-dev",
+        "fastd/storage": "dev-dev",
+        "fastd/logger": "dev-dev",
+        "fastd/console": "dev-dev",
+        "fastd/finder": "dev-dev",
+        "fastd/debug": "dev-dev",
+        "fastd/template": "dev-dev"
     },
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "": "src/",
+            "Module\\": "Module"
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Module\\Module::init",
+            "phpunit"
+        ],
+        "post-create-project-cmd": [
+            "Module\\Module::init",
+            "phpunit"
+        ]
     }
 }
