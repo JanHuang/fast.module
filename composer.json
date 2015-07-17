@@ -1,6 +1,6 @@
 {
     "name": "fastd/fastd-module",
-    "type": "project",
+    "type": "library",
     "keywords": [
         "module develop"
     ],
