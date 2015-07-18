@@ -15,7 +15,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5",
-        "fastd/framework": "~0.1.0, 0.1.*"
+        "fastd/framework": "0.1.*"
     },
     "autoload": {
         "psr-4": {
