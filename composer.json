@@ -1,21 +1,21 @@
 {
     "name": "fastd/fastd-module",
     "type": "library",
+    "description": "The fastd module framework.",
+    "license": "MIT",
+    "minimum-stability": "dev",
     "keywords": [
         "module develop framework."
     ],
-    "description": "The fastd module framework.",
-    "license": "MIT",
     "authors": [
         {
             "name": "janhuang",
             "email": "bboyjanhuang@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.5",
-        "fastd/framework": "dev-dev"
+        "php": ">=5.4.0",
+        "fastd/framework": "~0.1.0, 0.1.*"
     },
     "autoload": {
         "psr-4": {
