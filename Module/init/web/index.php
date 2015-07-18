@@ -12,10 +12,10 @@
  * WebSite: http://www.janhuang.me
  */
 
+include __DIR__ . '/../vendor/autoload.php';
+include __DIR__ . '/../app/Application.php';
 
-include __DIR__ . '/../app/bootstrap.php';
-
-$app = new App('dev');
+$app = new Application('dev');
 
 $app->boot();
 

@@ -17,29 +17,20 @@
         "php": ">=5.5"
     },
     "require-dev": {
-        "fastd/fastd": "dev-dev"
+        "fastd/framework": "~0.1.0, 0.1.*"
     },
     "autoload": {
         "psr-4": {
             "": "src/",
-            "Module\\": "Module"
+            "Module\\": "module"
         }
     },
     "config": {
         "bin-dir": "bin"
     },
     "scripts": {
-        "post-install-cmd": [
-            "Module\\Module::init",
-            "phpunit"
-        ],
-        "post-update-cmd": [
-            "Module\\Module::init",
-            "phpunit"
-        ],
-        "post-create-project-cmd": [
-            "Module\\Module::init",
-            "phpunit"
-        ]
+        "post-update-cmd": "Module\\Module::init",
+        "post-install-cmd": "Module\\Module::init",
+        "post-create-project-cmd": "Module\\Module::init"
     }
 }

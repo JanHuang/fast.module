@@ -1,5 +1,6 @@
 /vendor/
-≥idea
+.idea
 /web
 /tests
 /src
+/app

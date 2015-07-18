@@ -21,17 +21,18 @@ class Module
     public static function init(Event $event)
     {
         $root = realpath('.');
-        static::createSrc($root);
+        static::createBoot($root);
         static::createWeb($root);
-        static::createTests($root);
+        static::createSrc($root);
     }
 
     public static function createBoot($rootPath)
     {
-        $boot = $rootPath . DIRECTORY_SEPARATOR . 'bootstrop';
+        $boot = $rootPath . DIRECTORY_SEPARATOR . 'app';
         static::mkdir($boot);
-        copy(__DIR__ . '/init/app/App.php', $boot . '/App.php');
-        copy(__DIR__ . '/init/app/bootstrap.php', $boot . '/bootstrap.php');
+        static::mkdir($boot . '/config');
+        copy(__DIR__ . '/init/app/Application.php', $boot . '/Application.php');
+        copy(__DIR__ . '/init/app/global.php', $boot . '/config/global.php');
     }
 
     public static function createWeb($rootPath)
@@ -45,14 +46,6 @@ class Module
     {
         $src = $rootPath . DIRECTORY_SEPARATOR . 'src';
         static::mkdir($src);
-    }
-
-    public static function createTests($rootPath)
-    {
-        $tests = $rootPath . DIRECTORY_SEPARATOR . 'tests';
-        static::mkdir($tests);
-        copy(__DIR__ . '/init/tests/ModuleTest.php', $tests . '/ModuleTest.php');
-        copy(__DIR__ . '/init/tests/phpunit.xml.dist', $rootPath . '/phpunit.xml.dist');
     }
 
     protected static function mkdir($dir)

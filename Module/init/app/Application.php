@@ -1,18 +1,16 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: janhuang
- * Date: 15/7/17
- * Time: 下午3:39
- * Github: https://www.github.com/janhuang
+ * Date: 15/2/7
+ * Time: 上午1:59
+ * Github: https://www.github.com/janhuang 
  * Coding: https://www.coding.net/janhuang
  * SegmentFault: http://segmentfault.com/u/janhuang
  * Blog: http://segmentfault.com/blog/janhuang
  * Gmail: bboyjanhuang@gmail.com
- * WebSite: http://www.janhuang.me
  */
-class App extends \Kernel\AppKernel
+class Application extends \FastD\Framework\Kernel\AppKernel
 {
     /**
      * Register project bundles into the kernel.
@@ -22,7 +20,7 @@ class App extends \Kernel\AppKernel
     public function registerBundles()
     {
         return array(
-
+            new \Module\Welcome\Boot(),
         );
     }
 
@@ -36,12 +34,12 @@ class App extends \Kernel\AppKernel
      *
      * @return array
      */
-    public function registerHelpers(){}
+    public function registerHelpers(){return [];}
 
     /**
      * @return array
      */
-    public function registerConfigVariable(){}
+    public function registerConfigVariable(){return [];}
 
     /**
      * Register application configuration
