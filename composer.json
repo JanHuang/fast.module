@@ -3,7 +3,7 @@
     "type": "library",
     "description": "The fastd module framework.",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "keywords": [
         "module develop framework."
     ],
