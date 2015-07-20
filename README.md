@@ -43,3 +43,8 @@ drwxr-xr-x   3 janhuang  admin   102B  7 20 12:00 web
 
 建立自己的项目包在 `src` 目录。目录结构遵循 `psr-4` 即可，需要有 `Boot.php` 引导文件，继承 `FastD\Framework\Bundle` 基类引导文件。完成自己的项目包。即可发布vcs，自行进行依赖安装，达到一人开发，多人维护，随时更新。酸爽
 
+###演示
+
+可以通过命令行: `php app/console bundle:generate Demo` 创建一个演示项目
+
+#License MIT
