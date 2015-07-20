@@ -1,8 +1,5 @@
-/vendor/
-.idea
-/web
-/tests
-/src
 /app
 /bin
-composer.lock
+/.idea
+/vendor
+/web

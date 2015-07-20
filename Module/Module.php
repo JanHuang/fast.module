@@ -14,11 +14,9 @@
 
 namespace Module;
 
-use Composer\Script\Event;
-
 class Module
 {
-    public static function init(Event $event)
+    public static function init()
     {
         $root = realpath('.');
         static::createBoot($root);
@@ -34,6 +32,44 @@ class Module
         copy(__DIR__ . '/init/app/Application.php', $boot . '/Application.php');
         copy(__DIR__ . '/init/app/global.php', $boot . '/config/global.php');
         copy(__DIR__ . '/init/app/console', $boot . '/console');
+        $ignoreFile = $rootPath . '/.gitignore';
+        if (!file_exists($ignoreFile)) {
+            touch($ignoreFile);
+        }
+        $handle = fopen($ignoreFile, "r");
+        $defineIgnore = [];
+        if ($handle) {
+            while (($buffer = fgetss($handle, 4096)) !== false) {
+                $buffer = trim(str_replace(PHP_EOL, '', $buffer));
+                if (!empty($buffer)) {
+                    $defineIgnore[] = $buffer;
+                }
+            }
+            fclose($handle);
+        }
+
+        $length = count($defineIgnore);
+
+        if (empty($defineIgnore)) {
+            file_put_contents($ignoreFile,
+                <<<IGNORE
+/app
+/bin
+/.idea
+/vendor
+/web
+
+IGNORE
+            );
+        } else {
+            foreach ($defineIgnore as $key => $val) {
+                foreach (['/web', '/app', '/bin', '/.idea', '/vendor'] as $index => $ignore) {
+                    if (false === @strpos($ignore, $val) && $key === $length) {
+                        file_put_contents($ignoreFile, $ignore, FILE_APPEND);
+                    }
+                }
+            }
+        }
     }
 
     public static function createWeb($rootPath)
