@@ -29,9 +29,15 @@ class Module
         $boot = $rootPath . DIRECTORY_SEPARATOR . 'app';
         static::mkdir($boot);
         static::mkdir($boot . '/config');
-        copy(__DIR__ . '/init/app/Application.php', $boot . '/Application.php');
-        copy(__DIR__ . '/init/app/global.php', $boot . '/config/global.php');
-        copy(__DIR__ . '/init/app/console', $boot . '/console');
+        if (!file_exists($boot . '/Application.php')) {
+            copy(__DIR__ . '/init/app/Application.php', $boot . '/Application.php');
+        }
+        if (!file_exists($boot . '/config/global.php')) {
+            copy(__DIR__ . '/init/app/global.php', $boot . '/config/global.php');
+        }
+        if (!file_exists($boot . '/console')) {
+            copy(__DIR__ . '/init/app/console', $boot . '/console');
+        }
         $ignoreFile = $rootPath . '/.gitignore';
         if (!file_exists($ignoreFile)) {
             touch($ignoreFile);
