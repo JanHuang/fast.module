@@ -33,6 +33,7 @@ class Module
         static::mkdir($boot . '/config');
         copy(__DIR__ . '/init/app/Application.php', $boot . '/Application.php');
         copy(__DIR__ . '/init/app/global.php', $boot . '/config/global.php');
+        copy(__DIR__ . '/init/app/console', $boot . '/console');
     }
 
     public static function createWeb($rootPath)
