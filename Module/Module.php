@@ -29,6 +29,7 @@ class Module
         $boot = $rootPath . DIRECTORY_SEPARATOR . 'app';
         static::mkdir($boot);
         static::mkdir($boot . '/config');
+        static::mkdir($boot . '/views');
         if (!file_exists($boot . '/Application.php')) {
             copy(__DIR__ . '/init/app/Application.php', $boot . '/Application.php');
         }
