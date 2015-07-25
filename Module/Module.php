@@ -81,7 +81,7 @@ IGNORE
 
     public static function createWeb($rootPath)
     {
-        $web = $rootPath . DIRECTORY_SEPARATOR . 'web';
+        $web = $rootPath . DIRECTORY_SEPARATOR . 'public';
         static::mkdir($web);
         copy(__DIR__ . '/init/web/index.php', $web . '/index.php');
     }
