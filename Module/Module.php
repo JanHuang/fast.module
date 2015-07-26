@@ -64,7 +64,7 @@ class Module
 /bin
 /.idea
 /vendor
-/web
+/public
 
 IGNORE
             );
