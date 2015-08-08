@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "01560ebae8bba7dce9a0b1f297a08e61",
+    "hash": "69e8032ce46d85aae7b60586ba122f15",
     "packages": [
         {
             "name": "fastd/config",
@@ -189,16 +189,16 @@
         },
         {
             "name": "fastd/debug",
-            "version": "v0.1.1",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/debug.git",
-                "reference": "a361b10afec7f93c991f3f5cf725c6baa509661b"
+                "reference": "7bfa1fdb207da23b39e0895aa701970750cb77a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/debug/zipball/a361b10afec7f93c991f3f5cf725c6baa509661b",
-                "reference": "a361b10afec7f93c991f3f5cf725c6baa509661b",
+                "url": "https://api.github.com/repos/JanHuang/debug/zipball/7bfa1fdb207da23b39e0895aa701970750cb77a2",
+                "reference": "7bfa1fdb207da23b39e0895aa701970750cb77a2",
                 "shasum": ""
             },
             "require": {
@@ -209,6 +209,11 @@
                 "fastd/logger": "dev-dev"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "FastD\\": "src/FastD"
@@ -224,12 +229,13 @@
                     "email": "bboyjanhuang@gmail.com"
                 }
             ],
-            "description": "exception handle component.",
+            "description": "debug handle component.",
             "keywords": [
                 "FastD",
+                "debug",
                 "exception"
             ],
-            "time": "2015-07-24 03:49:37"
+            "time": "2015-08-08 15:17:42"
         },
         {
             "name": "fastd/finder",
@@ -273,16 +279,16 @@
         },
         {
             "name": "fastd/framework",
-            "version": "v1.2.2",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/framework.git",
-                "reference": "bdf0a13d0499df8229b9cecc10de7f312efff833"
+                "reference": "337f8ba595998461b2947f3df5b8f87f0ccbcd01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/framework/zipball/bdf0a13d0499df8229b9cecc10de7f312efff833",
-                "reference": "bdf0a13d0499df8229b9cecc10de7f312efff833",
+                "url": "https://api.github.com/repos/JanHuang/framework/zipball/337f8ba595998461b2947f3df5b8f87f0ccbcd01",
+                "reference": "337f8ba595998461b2947f3df5b8f87f0ccbcd01",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +296,7 @@
                 "fastd/console": "~0.1.3",
                 "fastd/container": "~0.1.1",
                 "fastd/database": "~0.2.0",
-                "fastd/debug": "~0.1.0",
+                "fastd/debug": "~1.0.1",
                 "fastd/finder": "~0.1.0",
                 "fastd/http": "~0.1.0",
                 "fastd/logger": "~0.1.0",
@@ -298,9 +304,6 @@
                 "fastd/storage": "~0.1.0",
                 "fastd/template": "~0.1.0",
                 "php": ">=5.5"
-            },
-            "require-dev": {
-                "fastd/fastd-module": "0.1.x-dev"
             },
             "type": "library",
             "extra": {
@@ -330,7 +333,7 @@
                 "FastD Module",
                 "FastD framework"
             ],
-            "time": "2015-08-03 02:42:57"
+            "time": "2015-08-08 15:48:30"
         },
         {
             "name": "fastd/http",

@@ -84,6 +84,7 @@ IGNORE
         $web = $rootPath . DIRECTORY_SEPARATOR . 'public';
         static::mkdir($web);
         copy(__DIR__ . '/init/web/index.php', $web . '/index.php');
+        copy(__DIR__ . '/init/web/.htaccess', $web . '/.htaccess');
     }
 
     public static function createSrc($rootPath)
