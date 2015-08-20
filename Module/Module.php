@@ -70,7 +70,7 @@ IGNORE
             );
         } else {
             foreach ($defineIgnore as $key => $val) {
-                foreach (['/web', '/app', '/bin', '/.idea', '/vendor'] as $index => $ignore) {
+                foreach (['/public', '/app', '/bin', '/.idea', '/vendor'] as $index => $ignore) {
                     if (false === @strpos($ignore, $val) && $key === $length) {
                         file_put_contents($ignoreFile, $ignore, FILE_APPEND);
                     }
