@@ -47,4 +47,4 @@ WELCOME;
     }
 }
 
-Routes::get('/', array(new Welcome(), 'welcomeAction'));
+Routes::get('/', '\Welcome@welcomeAction');
