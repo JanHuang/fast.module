@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "fastd/framework": "~1.4.0"
+        "fastd/framework": "~1.5.0"
     },
     "autoload": {
         "psr-4": {
