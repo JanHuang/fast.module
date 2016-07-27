@@ -19,8 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": "src/",
-            "Module\\": "module"
+            "": ""
         }
     },
     "extra": {
